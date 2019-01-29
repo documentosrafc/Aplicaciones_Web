@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>    
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">      
+<div class="page">
+       <img alt="Logo de la empresa" src="logo.png" />
+       <br />
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Portal de Ventas Wurth
+                </h1>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal"/>                       
+                        <asp:MenuItem NavigateUrl="~/ReposicionGastos.aspx" Text="Reposición de Gastos"/>
+                        <asp:MenuItem NavigateUrl="~/ActualizacionDatos.aspx" Text="Actualización de Datos"/>                        
+                        <asp:MenuItem NavigateUrl="~/Pedidos_Especiales.aspx" Text="Pedidos Especiales"/>
+                        <asp:MenuItem NavigateUrl="~/CotizacionesWeb.aspx" Text="Cotización"/>
+                        <asp:MenuItem NavigateUrl="~/InformacionDiarioVendedores.aspx" Text="Trabajo Diario"/>
+                        <asp:MenuItem NavigateUrl="" Text="Relación Facturas"/>                                              
+                        <asp:MenuItem NavigateUrl="~/PagosAplicados.aspx" Text="Pagos Aplicados"/>
+                        <asp:MenuItem NavigateUrl="~/BackOrders.aspx" Text="BackOrders"/>   
+                        <asp:MenuItem NavigateUrl="~/Consumo_Clientes.aspx" Text="Consumo Por Clientes"/>
+                        <asp:MenuItem NavigateUrl="~/VIS.aspx" Text="VIS Vendedor"/>                        
+                        <asp:MenuItem NavigateUrl="~/Perfil_Vendedor.aspx" Text="Perfil de Vendedor"/>
+                        <asp:MenuItem NavigateUrl="~/ListadeContacto.aspx" Text="Lista de Contacto"/>
+                        <asp:MenuItem NavigateUrl="~/InventarioActual.aspx" Text="Inventario"/>                                                
+                        <asp:MenuItem NavigateUrl="~/ListadePrecios.aspx" Text="Lista de Precios"/>
+                        <asp:MenuItem NavigateUrl="~/ReporteArticulosTop.aspx" Text="Top 100 Art. Vendidos por mi"/>  
+                        <asp:MenuItem NavigateUrl="~/DiferentesArticulosVendidospormi.aspx" Text="Diferentes Art. Vendidos por mi"/>                                                                                                               
+                         <asp:MenuItem NavigateUrl="http://www.wurth.com.do/catalogos/" Text="Catálogos e Infos"/>     
+                         <asp:MenuItem NavigateUrl="https://wsi.li/Lmc11D11m3OA/" Text="Descargar Catalogo"/>                                                                                                             
+                    </Items>
+                </asp:Menu>                                
+                    <asp:Menu ID="Menu1" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" Visible="false">
+                    <Items>  
+                        <asp:MenuItem Text="Estadistica de Cobros" NavigateUrl="~/EstadisticaCobros.aspx" Selectable="true"/>
+                         <asp:MenuItem Text="Estadistica de Ventas" NavigateUrl="~/EstadisticaVentas.aspx" Selectable="true"/>
+                                            
+                         <asp:MenuItem NavigateUrl="" Text="Controles" Selectable="false">                                               
+                        <asp:MenuItem Text="Previsión Final Mes" NavigateUrl="~/PrevisionFinMes.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="Reporte Jefas" NavigateUrl="~/InformacionDiarioJefas.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="Analisis de Vendedor" NavigateUrl="~/Analisis_Vendedor.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="Perfil de la Jefa" NavigateUrl="~/PerfildelaJefa.aspx" Selectable="true"></asp:MenuItem>
+                         </asp:MenuItem>
+
+                         <asp:MenuItem NavigateUrl="" Text="Administrar Mis Vendedores" Selectable="false">   
+                         <asp:MenuItem Text="Actualizaciones de Datos" NavigateUrl="~/ActualizacionesDatosVendedores.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="BackOrders" NavigateUrl="~/BackOrderPorVendedores.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="Depositos Registrados" NavigateUrl="~/Depositos_registrados.aspx" Selectable="true"></asp:MenuItem>
+                         <asp:MenuItem Text="Reposiciones Realizadas" NavigateUrl="~/ReposicionesHechas.aspx" Selectable="true"></asp:MenuItem>                    
+                         <asp:MenuItem Text="Información de Ventas por Vendedor" NavigateUrl="~/InformacionVentasVendedor.aspx" Selectable="true"></asp:MenuItem>                                             
+                         <asp:MenuItem Text="V.I.S de mis Vendedores" NavigateUrl="~/VISporVendedor.aspx" Selectable="true"/>
+                         <asp:MenuItem Text="Consumo de mis Vendedores" NavigateUrl="~/ConsumoporVendedor.aspx" Selectable="true"/>
+                         <asp:MenuItem Text="Pefil de mis Vendedores" NavigateUrl="~/PerfilPorVendedor.aspx" Selectable="true"/>                                  
+                         <asp:MenuItem Text="Pagos Aplicados de mis Vendedores" NavigateUrl="~/PagosAplicadosPorVendedores.aspx" Selectable="true"/>
+                         <asp:MenuItem Text="Trabajo Diario" NavigateUrl="~/TrabajoDiario.aspx" Selectable="true"/>    
+                         </asp:MenuItem>                                                                       
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        Todos los Derechos Reservados 2019
+    </div>
+   </form>
+</body>
+</html>
