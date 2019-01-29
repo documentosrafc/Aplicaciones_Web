@@ -9,5 +9,6 @@
     <p>
         Aplicación desarrollada para que los y las vendedoras (es) puedan verificar las informaciones de sus 
         clientes como las son: Facturación, Consumos, Saldos, Aplicación de Pagos, Estados de Cuentas, etc...
+       clientes como las son: Facturación, Consumos, Saldos, Aplicación de Pagos, Estados de Cuentas, etc...
     </p>
 </asp:Content>
